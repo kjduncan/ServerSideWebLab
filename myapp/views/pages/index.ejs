@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      Call the ejs inlude command and provide the path to the partial to
+      include. Path is relative to this file.
+   -->
+   <!-- Include our head.ejs file -->
+     <%include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+
+      <h4>Friends</h4>
+      <% friends.forEach(function(friend){ %>
+          <li><%= fiend.name %></li>
+        <% }); %>
+    </header>
+    <h3><%= tagline %></h3>
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
